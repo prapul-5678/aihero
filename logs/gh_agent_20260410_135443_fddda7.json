@@ -1,0 +1,123 @@
+{
+  "agent_name": "gh_agent",
+  "system_prompt": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+  "provider": "groq",
+  "model": "llama-3.1-8b-instant",
+  "tools": [
+    "search"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "where do i submit my assignments ",
+          "timestamp": "2026-04-10T11:54:42.779561+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "args": "{\"query\":\"assignment submission\"}",
+          "tool_call_id": "4kydk6d4s",
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 453,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 34,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:54:43+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-ec57b883-6a7b-4fb9-b62d-27184ad459f8",
+      "finish_reason": "tool_call"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "content": [
+            {
+              "id": "5a491cd847",
+              "question": "Can I collaborate with others on the capstone project?",
+              "sort_order": 3,
+              "content": "Collaboration is not allowed for the capstone submission. However, you can discuss ideas and get feedback from peers in the forums or Slack channels.",
+              "filename": "_questions/data-engineering-zoomcamp/project/003_5a491cd847_can-i-collaborate-with-others-on-the-capstone-proj.md"
+            },
+            {
+              "id": "4dbd2eea47",
+              "question": "Homework: Are late submissions of homework allowed?",
+              "sort_order": 17,
+              "content": "No, late submissions are not allowed. However, if the form is still open after the due date, you can still submit the homework. Confirm your submission by checking the date-timestamp on the Course page. Ensure you are logged in.",
+              "filename": "_questions/data-engineering-zoomcamp/general/017_4dbd2eea47_homework-are-late-submissions-of-homework-allowed.md"
+            },
+            {
+              "id": "05727a95dd",
+              "question": "Homework and Leaderboard: What is the system for points in the course management",
+              "sort_order": 18,
+              "content": "After you submit your homework, it will be graded based on the number of questions in that particular assignment. You can see the number of points you have earned at the top of the homework page. Additionally, in the [leaderboard](https://courses.datatalks.club/de-zoomcamp-2025/leaderboard), you will find the sum of all points you've earned: points for Homeworks, FAQs, and Learning in Public.\n\nPoint System Overview:\n\n- **Homework:** Points vary by assignment based on the number of questions.\n- **FAQ Contribution:** You get a maximum of 1 point for contributing to the FAQ in the respective week.\n- **Learning in Public:** For each learning in public link, you earn one point. You can achieve a maximum of 7 points.\n\nCheck this [video](https://www.loom.com/share/710e3297487b409d94df0e8da1c984ce) for more details.",
+              "filename": "_questions/data-engineering-zoomcamp/general/057_27a95dd_homework-and-leaderboard-wha.md"
+            },
+            {
+              "id": "56d8f7ae9a",
+              "question": "Why is my table not being created in PostgreSQL when I submit a job?",
+              "sort_order": 1,
+              "content": "There could be a few reasons for this issue:\n\n- **Race Conditions**: If you're running multiple processes in parallel.\n\n- **Database Connection Issues**: The job might not be connecting to the correct PostgreSQL database, or there could be authentication or permission issues preventing table creation.\n\n- **Missing Table Creation Logic**: The code responsible for creating the table might not be properly included or executed in the job submission process.\n\nAs a best practice, it's generally recommended to pre-create tables in PostgreSQL to avoid runtime errors. This ensures the database schema is properly set up before any jobs are executed.\n\nExtra: Use `CREATE TABLE IF NOT EXISTS` in your code. This will prevent errors if the table already exists and ensure smooth job execution.",
+              "filename": "_questions/data-engineering-zoomcamp/project/001_56d8f7ae9a_why-is-my-table-not-being-created-in-postgresql-wh.md"
+            }
+          ],
+          "tool_call_id": "4kydk6d4s",
+          "metadata": null,
+          "timestamp": "2026-04-10T11:54:43.377139+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "content": "Unfortunately, the search results do not mention where to submit assignments. To find this information, I suggest checking the course syllabus or the course management system for instructions on submission guidelines and deadlines.",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 1181,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 39,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:54:43+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-912eae37-38c2-4a09-811d-d2457f7dd326",
+      "finish_reason": "stop"
+    }
+  ],
+  "source": "user"
+}

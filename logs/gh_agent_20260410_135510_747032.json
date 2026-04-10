@@ -1,0 +1,137 @@
+{
+  "agent_name": "gh_agent",
+  "system_prompt": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+  "provider": "groq",
+  "model": "llama-3.1-8b-instant",
+  "tools": [
+    "search"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "how is the homework graded ",
+          "timestamp": "2026-04-10T11:55:09.088805+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "args": "{\"query\":\"homework grading\"}",
+          "tool_call_id": "y7pvfj6y6",
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 452,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 15,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:55:09+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-757a1a2c-f1c0-459e-bd81-1b1273cc0dcc",
+      "finish_reason": "tool_call"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "content": [
+            {
+              "id": "9d89b52976",
+              "images": [
+                {
+                  "description": "image #1",
+                  "id": "image_1",
+                  "path": "images/data-engineering-zoomcamp/image_eaa6f559.png"
+                }
+              ],
+              "question": "Homework: What is the homework URL in the homework link?",
+              "sort_order": 19,
+              "content": "<{IMAGE:image_1}>\n\nAnswer: In short, it\u2019s your repository on GitHub, GitLab, Bitbucket, etc.\n\nIn long, your repository or any other location where you have your code, and a reasonable person would look at it and think, yes, you went through the week and exercises. Think of it like a portfolio you could present to an employer.",
+              "filename": "_questions/data-engineering-zoomcamp/general/019_9d89b52976_homework-what-is-the-homework-url-in-the-homework.md"
+            },
+            {
+              "id": "d7abe28e77",
+              "question": "Which set-up should I use for my dlt homework?",
+              "sort_order": 2,
+              "content": "Technically you can use any code editor or Jupyter Notebook, as long as you can run dbt and answer the homework questions. A lot of code is provided by the instructor on the homework page to give you a head start in the right direction: [dlt Homework Instructions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/workshops/dlt/dlt_homework.md).\n\nThe most practical way is to use the provided Colabs Jupyter notebook called \u2018dlt - Homework.ipynb\u2019 which you can find here: [Colab Notebook](https://colab.research.google.com/drive/1plqdl33K_HkVx0E0nGJrrkEUssStQsW7#scrollTo=BtsSxtFfXQs3) since all of the provided code is applicable in the Colabs set-up.",
+              "filename": "_questions/data-engineering-zoomcamp/workshop-1-dlthub/002_d7abe28e77_which-set-up-should-i-use-for-my-dlt-homework.md"
+            },
+            {
+              "id": "4dbd2eea47",
+              "question": "Homework: Are late submissions of homework allowed?",
+              "sort_order": 17,
+              "content": "No, late submissions are not allowed. However, if the form is still open after the due date, you can still submit the homework. Confirm your submission by checking the date-timestamp on the Course page. Ensure you are logged in.",
+              "filename": "_questions/data-engineering-zoomcamp/general/017_4dbd2eea47_homework-are-late-submissions-of-homework-allowed.md"
+            },
+            {
+              "id": "d3f485cd10",
+              "question": "Homework: What are homework and project deadlines?",
+              "sort_order": 16,
+              "content": "2025 deadlines will be announced on [the course website](https://courses.datatalks.club/de-zoomcamp-2025/) and in [Google Calendar](https://calendar.google.com/calendar/?cid=ZXIxcjA1M3ZlYjJpcXU0dTFmaG02MzVxMG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).\n\nYou can find the 2024 deadlines here: [2024 Deadlines Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vQACMLuutV5rvXg5qICuJGL-yZqIV0FBD84CxPdC5eZHf8TfzB-CJT_3Mo7U7oGVTXmSihPgQxuuoku/pubhtml).\n\nAlso, take note of announcements from @Au-Tomator for any extensions or other news. The form may also show the updated deadline if the instructor(s) have updated it.",
+              "filename": "_questions/data-engineering-zoomcamp/general/016_d3f485cd10_homework-what-are-homework-and-project-deadlines.md"
+            },
+            {
+              "id": "443b9afd04",
+              "question": "Kafka homework Q3: There are options that support the scaling concept more than the others.",
+              "sort_order": 13,
+              "content": "Focus on the horizontal scaling option.\n\nThink of scaling in terms of scaling from the consumer end, or consuming messages via horizontal scaling.",
+              "filename": "_questions/data-engineering-zoomcamp/module-7/013_443b9afd04_kafka-homework-q3-there-are-options-that-support-t.md"
+            }
+          ],
+          "tool_call_id": "y7pvfj6y6",
+          "metadata": null,
+          "timestamp": "2026-04-10T11:55:09.759485+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "content": "Unfortunately, it seems that the search results didn't provide the information about how the homework is graded.\n\nYou can try searching again with a different query, or check the course materials directly to see if there's any information about grading.\n\nIf you have any other questions, feel free to ask.",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 1437,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 59,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:55:09+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-665350be-db1b-42f3-9043-19d3d290d954",
+      "finish_reason": "stop"
+    }
+  ],
+  "source": "user"
+}

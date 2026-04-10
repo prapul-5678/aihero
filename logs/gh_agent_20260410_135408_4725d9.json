@@ -1,0 +1,137 @@
+{
+  "agent_name": "gh_agent",
+  "system_prompt": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+  "provider": "groq",
+  "model": "llama-3.1-8b-instant",
+  "tools": [
+    "search"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "how do i submit the assignments ",
+          "timestamp": "2026-04-10T11:54:07.640027+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "args": "{\"query\":\"submit assignments data talks club\"}",
+          "tool_call_id": "9efhra5h5",
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 453,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 129,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:54:08+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-dc7c6398-3d58-4d4b-9b78-e66155b6dc98",
+      "finish_reason": "tool_call"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "content": [
+            {
+              "id": "9e508f2212",
+              "question": "Course: When does the course start?",
+              "sort_order": 1,
+              "content": "The next cohort starts January 12th, 2026. More info at [DTC](https://datatalks.club/blog/guide-to-free-online-courses-at-datatalks-club.html).\n\n- Register before the course starts using this [link](https://airtable.com/shr6oVXeQvSI5HuWD).\n- Join the [course Telegram channel with announcements](https://t.me/dezoomcamp).\n- Don\u2019t forget to register in DataTalks.Club's Slack and [join](https://datatalks.club/docs/general/slack/) the channel.",
+              "filename": "_questions/data-engineering-zoomcamp/general/001_9e508f2212_course-when-does-the-course-start.md"
+            },
+            {
+              "id": "4ee5e16952",
+              "question": "Taxi Data: Data Dictionary for NY Taxi data?",
+              "sort_order": 3,
+              "content": "Yellow Trips: [Data Dictionary](https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf)\n\nGreen Trips: [Data Dictionary - LPEP Trip Records May 1, 2018](https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf)",
+              "filename": "_questions/data-engineering-zoomcamp/module-1/003_4ee5e16952_taxi-data-data-dictionary-for-ny-taxi-data.md"
+            },
+            {
+              "id": "7255a1c3bc",
+              "images": [
+                {
+                  "description": "image #1",
+                  "id": "image_1",
+                  "path": "images/data-engineering-zoomcamp/image_813348b4.png"
+                }
+              ],
+              "question": "Leaderboard: how do find myself on the leaderboard?",
+              "sort_order": 20,
+              "content": "When you set up your account, you are automatically assigned a random name, such as \"Lucid Elbakyan.\" If you want to see what your display name is, follow these steps:\n\n- Go to your profile.\n  - 2025: [https://courses.datatalks.club/de-zoomcamp-2025/enrollment](https://courses.datatalks.club/de-zoomcamp-2025/enrollment)\n  - 2024: [https://courses.datatalks.club/de-zoomcamp-2024/enrollment](https://courses.datatalks.club/de-zoomcamp-2025/enrollment)\n- Log in.\n- Your display name is shown. You can also change it if you wish. \n- Ensure your certificate name is correct, as this name will later be printed on your certificate.\n\n<{IMAGE:image_1}>",
+              "filename": "_questions/data-engineering-zoomcamp/general/020_7255a1c3bc_leaderboard-how-do-find-myself-on-the-leaderboard.md"
+            },
+            {
+              "id": "9b0561dbf8",
+              "question": "Project: What is Project Attempt #1 and Project Attempt #2 exactly?",
+              "sort_order": 39,
+              "content": "You will have two attempts for a project.\n\n- If the first project deadline is over and you\u2019re late, or you submit the project and fail the first attempt, you have another chance to submit the project with the second attempt.",
+              "filename": "_questions/data-engineering-zoomcamp/general/039_9b0561dbf8_project-what-is-project-attempt-1-and-project-atte.md"
+            },
+            {
+              "id": "d677df9ccb",
+              "question": "Taxi Data: How to handle *.csv.gz taxi data files?",
+              "sort_order": 2,
+              "content": "In [this video](https://www.youtube.com/watch?v=B1WwATwf-vY&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb), the data file is stored as `output.csv`. If the file extension is `csv.gz` instead of `csv`, it won't store correctly.\n\nTo handle this:\n\n1. Replace `csv_name = \"output.csv\"` with the file name extracted from the URL. For example, for the yellow taxi data, use:\n   \n   ```python\n   url = \"https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz\"\n   csv_name = url.split(\"/\")[-1]\n   ```\n\n2. When you use `csv_name` with `pandas.read_csv`, it will work correctly because `pandas.read_csv` can directly read files with the `csv.gz` extension.\n\nExample:\n\n```python\nimport pandas as pd\n\nurl = \"https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz\"\ncsv_name = url.split(\"/\")[-1]\n\ndata = pd.read_csv(csv_name)\n```",
+              "filename": "_questions/data-engineering-zoomcamp/module-1/002_d677df9ccb_taxi-data-how-to-handle-csvgz-taxi-data-files.md"
+            }
+          ],
+          "tool_call_id": "9efhra5h5",
+          "metadata": null,
+          "timestamp": "2026-04-10T11:54:08.605375+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "content": "Unfortunately, the search results do not provide clear guidance on how to submit assignments for Data Talks Club. Please check the course Telegram channel with announcements, Data Talks Club's Slack, and your instructor for more information on the submission process.",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 1563,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 47,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:54:08+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-80621955-c711-4641-be38-f7a70e1b1252",
+      "finish_reason": "stop"
+    }
+  ],
+  "source": "user"
+}

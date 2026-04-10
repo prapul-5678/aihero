@@ -1,0 +1,137 @@
+{
+  "agent_name": "gh_agent",
+  "system_prompt": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+  "provider": "groq",
+  "model": "llama-3.1-8b-instant",
+  "tools": [
+    "search"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "how do i submit my homework ",
+          "timestamp": "2026-04-10T11:55:23.332585+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "args": "{\"query\":\"submit homework course materials\"}",
+          "tool_call_id": "na268zbef",
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 453,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 16,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:55:23+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-11588118-9f7e-4919-bc6a-de70e160bdec",
+      "finish_reason": "tool_call"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "content": [
+            {
+              "id": "4dbd2eea47",
+              "question": "Homework: Are late submissions of homework allowed?",
+              "sort_order": 17,
+              "content": "No, late submissions are not allowed. However, if the form is still open after the due date, you can still submit the homework. Confirm your submission by checking the date-timestamp on the Course page. Ensure you are logged in.",
+              "filename": "_questions/data-engineering-zoomcamp/general/017_4dbd2eea47_homework-are-late-submissions-of-homework-allowed.md"
+            },
+            {
+              "id": "9d89b52976",
+              "images": [
+                {
+                  "description": "image #1",
+                  "id": "image_1",
+                  "path": "images/data-engineering-zoomcamp/image_eaa6f559.png"
+                }
+              ],
+              "question": "Homework: What is the homework URL in the homework link?",
+              "sort_order": 19,
+              "content": "<{IMAGE:image_1}>\n\nAnswer: In short, it\u2019s your repository on GitHub, GitLab, Bitbucket, etc.\n\nIn long, your repository or any other location where you have your code, and a reasonable person would look at it and think, yes, you went through the week and exercises. Think of it like a portfolio you could present to an employer.",
+              "filename": "_questions/data-engineering-zoomcamp/general/019_9d89b52976_homework-what-is-the-homework-url-in-the-homework.md"
+            },
+            {
+              "id": "d7abe28e77",
+              "question": "Which set-up should I use for my dlt homework?",
+              "sort_order": 2,
+              "content": "Technically you can use any code editor or Jupyter Notebook, as long as you can run dbt and answer the homework questions. A lot of code is provided by the instructor on the homework page to give you a head start in the right direction: [dlt Homework Instructions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/workshops/dlt/dlt_homework.md).\n\nThe most practical way is to use the provided Colabs Jupyter notebook called \u2018dlt - Homework.ipynb\u2019 which you can find here: [Colab Notebook](https://colab.research.google.com/drive/1plqdl33K_HkVx0E0nGJrrkEUssStQsW7#scrollTo=BtsSxtFfXQs3) since all of the provided code is applicable in the Colabs set-up.",
+              "filename": "_questions/data-engineering-zoomcamp/workshop-1-dlthub/002_d7abe28e77_which-set-up-should-i-use-for-my-dlt-homework.md"
+            },
+            {
+              "id": "068529125b",
+              "question": "Course - Can I follow the course after it finishes?",
+              "sort_order": 8,
+              "content": "Yes, we will keep all the materials available, so you can follow the course at your own pace after it finishes.\n\nYou can also continue reviewing the homeworks and prepare for the next cohort. You can also start working on your final capstone project.",
+              "filename": "_questions/data-engineering-zoomcamp/general/008_068529125b_course-can-i-follow-the-course-after-it-finishes.md"
+            },
+            {
+              "id": "3f1424af17",
+              "question": "Course: Can I still join the course after the start date?",
+              "sort_order": 3,
+              "content": "Yes, even if you don't register, you're still eligible to submit the homework.\n\nBe aware, however, that there will be deadlines for turning in homeworks and the final projects. So don't leave everything for the last minute.",
+              "filename": "_questions/data-engineering-zoomcamp/general/003_3f1424af17_course-can-i-still-join-the-course-after-the-start.md"
+            }
+          ],
+          "tool_call_id": "na268zbef",
+          "metadata": null,
+          "timestamp": "2026-04-10T11:55:23.976034+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "content": "To submit your homework, you can follow these steps based on the search results:\n\n1. Ensure you are logged in and check the date-timestamp on the Course page to confirm your submission.\n2. Submit your homework through the provided form, which can be found in the course materials or through the link provided by the instructor.\n3. If you miss the deadline, check if the form is still open. If it is, you can still submit your homework.\n4. Use any code editor or Jupyter Notebook you prefer, or use the provided Colabs Jupyter notebook called 'dlt - Homework.ipynb' for a head start.\n5. Review the homework instructions in the provided link [dlt Homework Instructions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/workshops/dlt/dlt_homework.md) for more information.\n\n[LINK TITLE](https://github.com/DataTalksClub/faq/blob/main/_questions/data-engineering-zoomcamp/general/017_4dbd2eea47_homework-are-late-submissions-of-homework-allowed.md) \n[LINK TITLE](https://github.com/DataTalksClub/faq/blob/main/_questions/data-engineering-zoomcamp/workshop-1-dlthub/002_d7abe28e77_which-set-up-should-i-use-for-my-dlt-homework.md) \n[LINK TITLE](https://github.com/DataTalksClub/faq/blob/main/_questions/data-engineering-zoomcamp/general/019_9d89b52976_homework-what-is-the-homework-url-in-the-homework.md)",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 1268,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 342,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {}
+      },
+      "model_name": "llama-3.1-8b-instant",
+      "timestamp": "2026-04-10T11:55:24+00:00",
+      "kind": "response",
+      "provider_name": "groq",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-54994410-67a3-4519-ac30-4ab318d3606f",
+      "finish_reason": "stop"
+    }
+  ],
+  "source": "user"
+}
