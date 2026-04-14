@@ -78,10 +78,10 @@ aihero/
 - https://alexeygrigorev.com/aihero/
 - Built with Pydantic AI, Groq, Streamlit
 
-##instructions to create it in the powershell
+##instructions to push into github 
 
-cd "$env:USERPROFILE\aihero\app"
-notepad README.md
-git add README.md
-git commit -m "added README"
-git push origin main
+-cd "$env:USERPROFILE\aihero\app"
+-notepad README.md
+-git add README.md
+-git commit -m "added README"
+-git push origin main
