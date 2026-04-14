@@ -1,7 +1,7 @@
 # AI FAQ Agent
 An intelligent AI agent that can answer questions about any GitHub repository documentation using natural language.
 
-##Overview 
+## Overview 
 Ever wanted to ask about the github repository instead of reading everthing in documentation?
 This project does exactly that! It:
 - Downloads any GitHub repository
@@ -78,7 +78,7 @@ aihero/
 - https://alexeygrigorev.com/aihero/
 - Built with Pydantic AI, Groq, Streamlit
 
-##instructions to push into github 
+## instructions to push into github 
 
 -cd "$env:USERPROFILE\aihero\app"
 -notepad README.md
